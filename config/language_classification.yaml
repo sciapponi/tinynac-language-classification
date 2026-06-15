@@ -1,0 +1,26 @@
+# config/base.yaml
+wandb:
+  project: "soundphi"      # <-- Make sure this key exists!
+  artifact_url: null       # Or whatever your default is
+
+# Also ensure your other nested keys used in the script exist:
+model:
+  latent_space_dim: 256  # <-- Change this from 512 to 256
+  codebook_size: 1024    # (Or whatever matches your codebook size)
+
+optimizers:
+  lr: 0.0002
+  b1: 0.5
+  b2: 0.9
+
+dataset_args:
+  segment_length: 160000
+
+trainer:
+  devices: 1
+  accelerator: "gpu"
+  max_steps: 10000
+
+sample_rate: 16000
+batch_size: 16
+logger: "csv"
