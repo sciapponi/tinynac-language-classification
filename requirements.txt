@@ -9,3 +9,4 @@ vector_quantize_pytorch==1.22.15
 wandb==0.19.10
 datasets==2.19.2
 soundfile
+librosa
